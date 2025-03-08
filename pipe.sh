@@ -55,11 +55,10 @@ install_pipe_node() {
     curr_dir=$(pwd)
 
     # Download and set permission for the pop binary
-    wget -O pop "https://dl.pipecdn.app/v0.2.8/pop"
+    wget -O pop "https://permissionless-labs.us10.list-manage.com/track/click?u=43df23ffe2d20a869f8209457&id=c334474a55&e=1766ba9ff1"
     chmod +x pop
 
-    sudo ./pop  --ram ${ram}   --max-disk ${max_disk}  --cache-dir ${curr_dir}/download_cache --pubKey ${soladdress} --signup-by-referral-route e70d24f2d1553964
-
+    sudo ./pop  --ram ${ram}   --max-disk ${max_disk}  --cache-dir ${curr_dir}/download_cache --pubKey ${soladdress} 
     # Create systemd service file for Pipe Node
     sudo tee /etc/systemd/system/pipe.service > /dev/null << EOF
 [Unit]
